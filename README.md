@@ -36,8 +36,20 @@ _Desugars into:_
 ```javascript
 class User {
   constructor({ name = 'Anonymous', age = 0 }) {
-    this.name = name;
-    this.age = age;
+    Object.defineProperties(this, {
+      name: {
+        configurable: false,
+        enumerable: true,
+        writable: false,
+        value: name,
+      },
+      age: {
+        configurable: false,
+        enumerable: true,
+        writable: false,
+        value: age,
+      }
+    });
   }
 
   copy({ name, age }) {
