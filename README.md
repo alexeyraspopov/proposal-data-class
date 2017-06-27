@@ -30,3 +30,29 @@ data class User {
   age: number = 0;
 }
 ```
+
+_Desugars into:_
+
+```javascript
+class User {
+  constructor({ name = 'Anonymous', age = 0 }) {
+    this.name = name;
+    this.age = age;
+  }
+
+  copy({ name, age }) {
+    return new User({ name, age });
+  }
+
+  equals(user) {
+    return (
+      user !== null &&
+      user !== undefined &&
+      this.constructor === user.constructor &&
+      this.name === user.name &&
+      this.age === user.age
+    );
+  }
+}
+```
+
