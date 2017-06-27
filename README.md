@@ -1,6 +1,6 @@
 # Immutable Data Class for ECMAScript
 
-Inspired by [Kotlin/Scala Data Classes](https://kotlinlang.org/docs/reference/data-classes.html).
+Inspired by [Kotlin/Scala Data Classes](https://kotlinlang.org/docs/reference/data-classes.html), [Ember Model](https://guides.emberjs.com/v2.13.0/models/defining-models/), [Backbone Model](http://backbonejs.org/#Model).
 
 See approximate implementation [here](https://github.com/alexeyraspopov/dataclass).
 
